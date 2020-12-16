@@ -1,4 +1,4 @@
-name: testing_github_pages
+name: Test GitHub pages and project requirements
 
 on:
   push:
@@ -17,8 +17,8 @@ jobs:
       - name: Checkout code from master branch
         uses: actions/checkout@v2
         with:
-          submodules: true  # Fetch Hugo themes (true OR recursive)
-          fetch-depth: 0    # Fetch all history for .GitInfo and .Lastmod
+          submodules: true
+          fetch-depth: 0
       - name: Set up Python ${{ matrix.python-version }}
         uses: actions/setup-python@v1
         with:
@@ -26,26 +26,16 @@ jobs:
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install -r .github/requirements.txt 
-          pip install pytest
-          pip install pytest-html
-            
-      - name: Lint with flake8
-        run: |
-          pip install flake8
-          # stop the build if there are Python syntax errors or undefined names
-          flake8 . --count --select=E9,F63,F7,F82 --show-source --statistics
-          # exit-zero treats all errors as warnings. The GitHub editor is 127 chars wide
-          flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
-      - name: Check if github pages enabled
+          pip install -r .github/requirements.txt
+      - name: Check that GitHub pages are enabled
         shell: "bash"
         env:
           repo: ${{ github.repository }} 
         run: |
-          python .github/url_test.py $repo 
-      - name: HTML testing
+          python .github/test_github_pages.py -r $repo 
+      - name: Check project requirements against published pages
         shell: "bash"
         env:
           repo: ${{ github.repository }} 
         run: |
-          python .github/test.py $repo 
+          python .github/test_project_requirements.py -r $repo 2>/dev/null
