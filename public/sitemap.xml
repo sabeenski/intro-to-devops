@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>https://cs-ej4104-fall-2020.github.io/sabeenski-project/</loc>
+    <lastmod>2020-12-23T10:51:50+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://cs-ej4104-fall-2020.github.io/sabeenski-project/post/learnings/</loc>
+    <lastmod>2020-12-23T10:51:50+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://cs-ej4104-fall-2020.github.io/sabeenski-project/post/</loc>
+    <lastmod>2020-12-23T10:51:50+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://cs-ej4104-fall-2020.github.io/sabeenski-project/post/devops/</loc>
+    <lastmod>2020-12-23T10:51:50+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://cs-ej4104-fall-2020.github.io/sabeenski-project/categories/</loc>
+  </url>
+  
+  <url>
+    <loc>https://cs-ej4104-fall-2020.github.io/sabeenski-project/tags/</loc>
+  </url>
+  
+</urlset>
