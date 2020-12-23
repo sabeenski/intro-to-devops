@@ -1,0 +1,4 @@
+baseURL = "https://cs-ej4104-fall-2020.github.io/sabeenski-project/"
+languageCode = "en-us"
+title = "Intro to Devops Course"
+theme = "base16"
