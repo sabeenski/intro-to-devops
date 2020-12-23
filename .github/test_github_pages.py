@@ -3,7 +3,7 @@ import sys
 if __name__ == '__main__':
     if str(sys.argv[1]) == "-r":
         (group, project) = ( str(sys.argv[2]).split('/')[0], str(sys.argv[2]).split('/')[1])
-        repository_url = "http://{}.github.io/{}/".format(group, project)
+        repository_url = "https://{}.github.io/{}/".format(group, project)
     else:
         repository_url = str(sys.argv[1])
     data = requests.get(repository_url)
